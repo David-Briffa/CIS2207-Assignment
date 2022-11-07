@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-</head>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Credit Card</title>
+  </head>
 <body>
-    <h1>I am a credit card system! I ravage your savings!</h1>
-    <a href="creditCard.html">
-        <button>Swipe Me!</button>
+   <h1>I am a credit card system! I ravage your savings!</h1>
+     <a href="creditCard.html">
+        <button name="swipe_button">Swipe Me!</button>
      </a>
+   <p>
      <a href="accepted.html">
         <button>Credit Card Accepted</button>
      </a>
      <a href="denied.html">
         <button>Credit Card Denied</button>
      </a>
+   </p>
+      <form>
+         <input type="button" value="Go back!" onclick="history.back()">
+      </form>
 </body>
 </html>
