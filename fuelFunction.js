@@ -3,6 +3,7 @@ var litreDisplay = document.getElementById('litres');
 var sale = document.getElementById('sale');
 var costDisplay = document.getElementById('cost');
 var totalSale = document.getElementById('totalsale');
+var back = document.getElementById('back');
 var litres = 0;
 var cost = 1.35;
 var limit = 7;
@@ -34,7 +35,9 @@ function pumpFuel() {
 }
 
 function start() {
+back.style.display = "none";
 pump = setInterval(pumpFuel, rate)
+
 }
 function slow() {
     slowLevel++;
@@ -48,9 +51,4 @@ function stop() {
 function display() {
     litreDisplay.innerHTML = litres.toFixed(3);
     sale.innerHTML = (litres*cost).toFixed(3);
-}
-function reset() {
-    litres=0;
-    display();
-
 }
