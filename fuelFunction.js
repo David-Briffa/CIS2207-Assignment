@@ -4,6 +4,8 @@ var sale = document.getElementById('sale');
 var costDisplay = document.getElementById('cost');
 var totalSale = document.getElementById('totalsale');
 var back = document.getElementById('back');
+var complete = document.getElementById('complete');
+complete.style.display = "none";
 var litres = 0;
 var cost = 1.35;
 var limit = 7;
@@ -32,6 +34,9 @@ function pumpFuel() {
     }
     
     display()
+    if (litres*cost == limit) {
+        complete.style.display = "block";
+    }
 }
 
 function start() {
