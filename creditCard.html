@@ -8,19 +8,21 @@
   </head>
 <body>
    <h1>I am a credit card system! I ravage your savings!</h1>
-     <a href="creditCard.html">
-        <button name="swipe_button">Swipe Me!</button>
-     </a>
+      <button type="button" value="card" id="swipe_button" onclick="Swipe()">Swipe Card</button>
+      
+     <p id="information">
+
+   </p>
+
    <p>
-     <a href="accepted.html">
-        <button>Credit Card Accepted</button>
-     </a>
-     <a href="denied.html">
-        <button>Credit Card Denied</button>
-     </a>
+      <button type="button" value="Accepted" id="accepted_button" onclick="Accepted()">Accepted</button>
+
+      <button type="button" value="Denied" id="denied_button" onclick="Denied()">Denied</button>
+
    </p>
       <form>
          <input type="button" value="Go back!" onclick="history.back()">
       </form>
 </body>
+<script src="jsFiles\creditCardSwiped.js"></script>
 </html>
