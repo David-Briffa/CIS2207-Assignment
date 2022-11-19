@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <header>
+            <h1>Cash Pay</h1>
+            <h2>Select the amount!</h2>
+        </header>
+        <section id="cashCalc">
+            <div id="amounts">
+                <button type="button" value="10" id="10euro_button" onclick="addTen()">10 Euro</button>
+                    &emsp;
+                <button type="button" value="20" id="20euro_button" onclick="addTwenty()">20 Euro</button>
+                    &emsp;
+                <button type="button" value="50" id="50euro_button" onclick="addFifty()">50 Euro</button>
+            </div>
+        </section>
+        <section id="result">
+            <h2>Total: <span id="totalsale">0</span></h2>
+            <button type="button" id="back" onclick="history.back()">Go back</button>
+            &emsp;
+            <button type="button" id="continue" onclick="location.href='fuelDisplay.html'">Start Pumping!</button>
+        </section>
+        <script src="jsFiles\cashFunction.js"></script>
+    </body>
+</html>
