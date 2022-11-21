@@ -4,7 +4,6 @@
     height: 100%;
     background: #d4d0d0;
     z-index: 10;
-    
   }
 
   #information{
@@ -120,6 +119,27 @@
       opacity: 0;
     }
   }
+ .ten-btn{
+  background-image: url("images/10.jpg");
+  height:10em;
+  width:20em;
+  background-size: cover;
+  border-radius: 5%;
+ }
+ .twenty-btn{
+  background-image: url("images/20.jpg");
+  height:10em;
+  width:20em;
+  background-size: cover;
+  border-radius: 5%;
+ } 
+ .fifty-btn{
+  background-image: url("images/50.jpg");
+  height:10em;
+  width:20em;
+  background-size: cover;
+  border-radius: 5%;
+ }
 .swipe{
     position: relative;
     display: flex;
