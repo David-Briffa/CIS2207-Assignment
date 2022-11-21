@@ -154,7 +154,7 @@
 
   }
 .card-btn{
-  background-image: url('https://media.product.which.co.uk/prod/images/original/gm-f50323d2-2452-4c2b-b9f0-3b42aeef4808-istock-531236924-1.jpeg');
+  background-image: url('images/card.jpeg');
   background-size:cover;
   border-radius: 25px;  
   width:40em;
@@ -163,7 +163,7 @@
 
 }
 .cash-btn{
-  background-image:url('https://img.freepik.com/free-photo/set-euro-currency-bills-isolated_1101-2388.jpg?w=2000');
+  background-image:url('images/money.jpg');
   background-size:cover;
   border-radius: 25px;  
   width:40em;
