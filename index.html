@@ -13,14 +13,20 @@
     </div>
     <div class="wrap">
      <a href="gradeSelect.html">
-        <button class="main-btn">Petrol</button>
-        <button class="main-btn">Diesel</button>
+        <a href="gradeSelect.html">
+            <button class="main-btn" onclick = "fuelType('pet')">Petrol</button>
+        </a>
+        <a href = "fixedDynamicPayment.html">
+            <button class="main-btn" onclick = "fuelType('diesel')">Diesel</button>
+        </a>
      </a>
     </div>
     <div class="wrap">
      <a href="homeScreen.html">
-        <button class="main-btn">Manager Console</button>
-     </a>    
+        <button class="main-btn" onclick = "fuelPriceCheck()">Manager's Console</button>
+     </a>
     </div>
+    <button onclick = "getFuelPrice()">test</button>
 </body>
 </html>
+<script src="jsFiles\fuelPrice.js"></script>
