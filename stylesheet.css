@@ -123,6 +123,8 @@
   background-image: url("images/10.jpg");
   height:10em;
   width:20em;
+  padding:1em;
+  margin:0.5em;
   background-size: cover;
   border-radius: 5%;
  }
@@ -130,6 +132,8 @@
   background-image: url("images/20.jpg");
   height:10em;
   width:20em;
+  padding:1em;
+  margin:0.5em;
   background-size: cover;
   border-radius: 5%;
  } 
@@ -137,6 +141,8 @@
   background-image: url("images/50.jpg");
   height:10em;
   width:20em;
+  padding:1em;
+  margin:0.5em;
   background-size: cover;
   border-radius: 5%;
  }
