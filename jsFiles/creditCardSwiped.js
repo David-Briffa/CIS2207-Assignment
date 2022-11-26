@@ -22,32 +22,33 @@ function Swipe() {
  function PayByCard(){
     document.cookie = 'payByCard=True';
  }
- function getCookie(cname) {
-   let name = cname + "=";
-   let ca = document.cookie.split(';');
-     for(let i = 0; i < ca.length; i++) {
-       let c = ca[i];
-       while (c.charAt(0) == ' ') 
-       {
-           c = c.substring(1);
-       }
-         if (c.indexOf(name) == 0) 
-       {     
-         return c.substring(name.length, c.length);
-       }
-   }
-     return "";
-   }
+ function PayDynamically(){
+  document.cookie = 'dynamicPayment=True';
+}
+ function getCookie(cookieName) {
+  var cookieArr = document.cookie.split(";");
+  for(var i = 0; i < cookieArr.length; i++) {
+      var cookiePair = cookieArr[i].split("=");
+      if(cookieName == cookiePair[0].trim()) {
+          return decodeURIComponent(cookiePair[1]);
+      }
+  }
+  return null;
+}
  function checkCardCookie() {
    var bool = getCookie("payByCard");
-     if (bool != "") {
+     if (bool == "True") {
        alert("cookie is set, this transaction must lead to card interface after amount is set");
      }
    }
    function checkCardPumpCookie() {
       var bool = getCookie("cardAccepted");
-        if (bool != "") {
+      var dynamicBool = getCookie("dynamicPayment");
+        if (bool == "True") {
          alert("cookie is set, can pump up to 120eu");
+        }
+        if(dynamicBool == "True"){
+          alert("dynamic fueling allowed");
         }
       }
  
