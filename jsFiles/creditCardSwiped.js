@@ -43,12 +43,9 @@ function Swipe() {
    }
    function checkCardPumpCookie() {
       var bool = getCookie("cardAccepted");
-      var dynamicBool = getCookie("dynamicPayment");
         if (bool == "True") {
          alert("cookie is set, can pump up to 120eu");
         }
-        if(dynamicBool == "True"){
-          alert("dynamic fueling allowed");
-        }
+
       }
  
