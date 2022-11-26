@@ -241,7 +241,16 @@
 .cancel-btn span.title-hover { opacity: 0;}
 .cancel-btn:hover span.title { opacity: 0; }
 .cancel-btn:hover span.title-hover { opacity: 1; left: 60px; }   
-  
 
+.keypad{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.enter{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
   
