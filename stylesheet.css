@@ -119,6 +119,15 @@
       opacity: 0;
     }
   }
+  .five-btn{
+    background-image: url("images/5.jpg");
+    height:10em;
+    width:20em;
+    padding:1em;
+    margin:0.5em;
+    background-size: cover;
+    border-radius: 5%;
+   }
  .ten-btn{
   background-image: url("images/10.jpg");
   height:10em;
@@ -149,8 +158,6 @@
 .swipe{
     position: relative;
     display: flex;
-    
-
 
   }
 .card-btn{
