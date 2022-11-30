@@ -1,30 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Fuel Display</title>
-    </head>
-    <body>
-        
-        <h1>Fuel display</h1>
-        <h3>Total sale (€)</h3>
-        <div>
-            <p id="totalsale">placeholder number</p>
-        </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Fueling</title>
+      <link rel="stylesheet" href="stylesheet.css">
+  </head>
+
+<body>
+    <div class="information">
+        Fuel display<br>
+        Total sale (€)
+    </div>
+    <div>
+        <p id="totalsale">placeholder number</p>
+    </div>
         <h3>This sale (€)</h3>
-        <div>
-            <p id="sale">placeholder number</p>
-        </div>
+    <div>
+        <p id="sale">placeholder number</p>
+    </div>
         <h3>Litres</h3>
-        <div>
-            <p id="litres">placeholder number</p>
-        </div>
+    <div>
+        <p id="litres">placeholder number</p>
+    </div>
         <h3>Cents per litre</h3>
-        <div>
-            <p id="cost">placeholder number</p>
-        </div>
-        <button id="pump" onmousedown="start()" onmouseup="stop()">Pump fuel</button>
-        <button id="back" onclick="history.back()">Go back</button><br><br>
+    <div>
+        <p id="cost">placeholder number</p>
+    </div>
+    <div class="wrap">
+        <button id="pump" class="main-btn" onmousedown="start()" onmouseup="stop()">Pump fuel</button>
         <button id="complete" onclick="location.href='transaction.html'">Go to transaction</button>
-        <script src="jsFiles\fuelFunction.js"></script>
-    </body>
+        <button id="back" class="back-btn" onclick="history.back()"></button>  
+    </div>
+    <button type="button" value="test" id="test" onclick="checkCardPumpCookie()">check for cookie</button>
+
+</body>
+
+<script src="jsFiles\fuelFunction.js"></script>
+<script src="jsFiles\creditCardSwiped.js"></script>
 </html>

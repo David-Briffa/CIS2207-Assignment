@@ -1,27 +1,31 @@
-<html lang="en">
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Payment Type</title>
+    <title>Payment Type</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+<div> 
+    <a href="fixedDynamicPayment.html">
+       <button class="back-btn"></button>
+    </a>
+    <a href="index.html" class="cancel-btn" href="#" >
+       <span class="circle"></span>
+       <span class="title">Cancel Transaction</span>
+       <span class="title title-hover">Main Menu</span>
+    </a> 
+</div>
 <body>
-    I am a placeholder interface, users choose how much they want to spend here
-    <p>
-        <a href="cash.html">
-            <button type="button" value="PayByCard" id="payByCard_button" onclick="PayByCard()">Pay By Card</button>
-        </a>
-
-        <a href="cash.html">
-            <button>Pay By cash</button>
-        </a>
-    </p>
-    <p>
-        <a href="gradeSelect.html">
-            <button>Go Back</button>
-        </a>
-    </p>
-     
-     
+    <div text class="information">
+        select payment method
+    </div>
+    <div class="wrap">
+     <a href="cash.html">
+        <button type="button" value="PayByCard" id="payByCard_button" class="card-btn" onclick="PayByCard()"></button>
+        <button class="cash-btn"></button>
+     </a>
+    </div>
+<script src="jsFiles\creditCardSwiped.js"></script>
 </body>
 </html>

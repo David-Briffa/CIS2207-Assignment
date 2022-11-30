@@ -3,19 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Selection</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+    <div> 
+        <a href="index.html">
+            <button class = back-btn></button>
+         </a>
+     <a href="index.html" class="cancel-btn" href="#" >
+           <span class="circle"></span>
+           <span class="title">Cancel Transaction</span>
+           <span class="title title-hover">Main Menu</span>
+     </a> 
+    </div>
 <body>
-    <h1>You choose your fuel here:</h1>
-    <a href="fixedDynamicPayment.html">
-        <button>High Grade</button>
-        <button>Low Grade</button>
-     </a>
-
-     <a href="index.html">
-
-        <button class = back_button> Back </button>
-
-     </a>
+    <div text class="information">
+        Select Quality
+    </div>
+    <div class="wrap">
+        <a href="fixedDynamicPayment.html">
+            <button class="main-btn" onclick = "fuelGrade('Hi')">High Grade</button>
+            <button class="main-btn" onclick = "fuelGrade('Lo')">Low Grade</button>
+        </a>
+    </div>
 </body>
 </html>
+

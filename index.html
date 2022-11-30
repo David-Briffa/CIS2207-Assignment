@@ -3,16 +3,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    I am a main menu!
-    <a href="gradeSelect.html">
-        <button>Petrol</button>
-        <button>Diesel</button>
+    <div text class="mainMenu-information">
+        Main menu<br>
+        Select fuel type
+    </div>
+    <div class="wrap">
+     <a href="gradeSelect.html">
+        <a href="gradeSelect.html">
+            <button class="main-btn" onclick = "fuelType('pet')">Petrol</button>
+        </a>
+        <a href = "fixedDynamicPayment.html">
+            <button class="main-btn" onclick = "fuelType('diesel')">Diesel</button>
+        </a>
      </a>
+    </div>
+    <div class="wrap">
      <a href="homeScreen.html">
-        <button>Manager's Console</button>
+        <button class="main-btn" onclick = "fuelPriceCheck()">Manager Console</button>
      </a>
+    </div>
+    <button onclick = "getFuelPrice()">test</button>
 </body>
 </html>
+<script src="jsFiles\fuelPrice.js"></script>
