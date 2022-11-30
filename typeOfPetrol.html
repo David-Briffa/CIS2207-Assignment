@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Fuel prices</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<a href="fuelType.html">
+    <button class = back-btn></button>
+</a>
 <body>
-    <div class = "content">
-        <div class = "back">
-            <form action = "fuelType.html"><button id = "Back" type = "submit">Back</button></form>
-        </div>
-        <div class = "top-text row-cont center-cont">
-            <h2 class = "def-text">Choose the type of Petrol:</h2>
-        </div>
-        <div class = "type-btn col-cont center-cont">
+    <div class="information">Choose the type of Petrol:</div>
+        <div class = "wrap">
             <form action = "changeFuelPrice.html">
-                <button id = "Regular">Regular</button>
-                <button id = "Hi-grade">Hi-Grade</button>
+                <button id = "Regular" class="main-btn">Regular</button>
+                <button id = "Hi-grade" class="main-btn">Hi-Grade</button>
             </form>
-        </div>
-        <br></br>
-        <div class = "Cancel">
-            <form action = "homeScreen.html"><button id = "Cancel" type = "submit">Cancel</button></form>
-        </div>
+        </div> 
     </div>
-    <h3 id = "loggedManager" class = "def-text"> Manager Logged in: Manager1</h3>
 </body>
-
+<h3 id = "loggedManager" class = "def-text">Manager Logged in: Manager1</h3>
 </html>

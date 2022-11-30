@@ -3,29 +3,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
-
-<script src="jsFiles\priceInitializeSetter.js"></script>
-
 <body>
-    I am a main menu!
-    <a href="gradeSelect.html">
-        <button onclick = "fuelType('pet')">Petrol</button>
-    </a>
-
-    <a href = "fixedDynamicPayment.html">
-        <button onclick = "fuelType('diesel')">Diesel</button>
-    </a>
-
-
-    <a href="homeScreen.html">
-        <button onclick = "fuelPriceCheck()">Manager's Console</button>
-    </a>
-
+    <div text class="mainMenu-information">
+        Main menu<br>
+        Select fuel type
+    </div>
+    <div class="wrap">
+     <a href="gradeSelect.html">
+        <a href="gradeSelect.html">
+            <button class="main-btn" onclick = "fuelType('pet')">Petrol</button>
+        </a>
+        <a href = "fixedDynamicPayment.html">
+            <button class="main-btn" onclick = "fuelType('diesel')">Diesel</button>
+        </a>
+     </a>
+    </div>
+    <div class="wrap">
+     <a href="homeScreen.html">
+        <button class="main-btn" onclick = "fuelPriceCheck()">Manager Console</button>
+     </a>
+    </div>
     <button onclick = "getFuelPrice()">test</button>
-
 </body>
 </html>
-
 <script src="jsFiles\fuelPrice.js"></script>

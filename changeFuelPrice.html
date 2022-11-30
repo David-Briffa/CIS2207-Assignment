@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Change Prices</title>
+      <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <div> 
+    <a href="fuelType.html">
+      <button class="back-btn"></button>
+    </a>
+    <a href="index.html" class="cancel-btn" href="#" >
+      <span class="circle"></span>
+      <span class="title">Go to Main Menu</span>
+      <span class="title title-hover">Main Menu</span>
+    </a> 
+   </div>
 <body>
     <div id = "changeFuelPrice" class="content">
-        <div class = "back">
-            <form action = "fuelType.html"><button id = "Back" type = "submit">Back</button></form>
+        
+        <div class="information">
+            <h2 id = "fuelChosen" class = "med-text bold">Fuel Chosen:</h2>
         </div>
-        <div>
-            <h2 id = "fuelChosen" class = "med-text bold">Fuel Chosed:</h2>
-        </div>
-        <div>
+        <div class="information">
             <h2 id = "currentPrice" class="med-text bold">Current Price Per Ltr:</h2>
         </div>
-        <div class = "Cancel">
-            <form action = "homeScreen.html"><button id = "Cancel" type = "submit">Cancel</button></form>
-        </div>
-        <div>
+        <div class="information">
             <h2 id = "newPrice" class = "med-text bold">New Price per Ltr: </h2>
         </div>
+        </div>
         <div class = "keypad">
-            <button id = "number1">1</button>
-            <button id = "number2">2</button>
-            <button id = "number3">3</button>
-            <br></br>
-            <button id = "number4">4</button>
-            <button id = "number5">5</button>
-            <button id = "number6">6</button>
-            <br></br>
-            <button id = "number7">7</button>
-            <button id = "number8">8</button>
-            <button id = "number9">9</button>
-            <br></br>
-            <button id = ""> </button>
-            <button id = "number0">0</button>
-            <button id = ""> </button>
-            <br></br>
+            <div class="line1">
+                <button id = "number1" class="main-btn">1</button>
+                <button id = "number2" class="main-btn">2</button>
+                <button id = "number3" class="main-btn">3</button>
+            </div>
+            <div class="line2">
+                <button id = "number4" class="main-btn">4</button>
+                <button id = "number5" class="main-btn">5</button>
+                <button id = "number6" class="main-btn">6</button>
+            </div>
+            <div class="line3">
+                <button id = "number7" class="main-btn">7</button>
+                <button id = "number8" class="main-btn">8</button>
+                <button id = "number9" class="main-btn">9</button>
+            </div>
+            <div class="line4">
+                <button id = "" class="main-btn"> </button>
+                <button id = "number0" class="main-btn">0</button>
+                <button id = "" class="main-btn"> </button>
+            </div>
         </div>
         <div class = "enter">
-            <form action = "successChangedFuelPrice.html"><button id = "enter" type = "submit">Enter</button></form>
+            <form action = "successChangedFuelPrice.html"><button id = "enter" type = "submit" class="main-btn">Enter</button></form>
         </div>
     </div>
     <h3 id = "loggedManager" class = "def-text">Manager Logged in: Manager1</h3>
