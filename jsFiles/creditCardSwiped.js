@@ -20,7 +20,7 @@ function Swipe() {
        }
  
  function PayByCard(){
-    document.cookie = 'payByCard=True';
+  document.cookie = 'payByCard=True';
  }
  function PayDynamically(){
   document.cookie = 'dynamicPayment=True';
