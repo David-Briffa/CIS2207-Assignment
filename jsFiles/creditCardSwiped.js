@@ -15,37 +15,27 @@ function Swipe() {
     }
  }
  function Denied() {
-        information.textContent = "Card has been denied, please swipe again";       
-        information.body.appendChild(information);    
+    information.textContent = "Card has been denied, please swipe again";       
+    information.body.appendChild(information);    
        }
  
- function PayByCard(){
-  document.cookie = 'payByCard=True';
- }
  function PayDynamically(){
-  document.cookie = 'dynamicPayment=True';
+    sessionStorage.setItem('payDynamically', 'True');
 }
- function getCookie(cookieName) {
-  var cookieArr = document.cookie.split(";");
-  for(var i = 0; i < cookieArr.length; i++) {
-      var cookiePair = cookieArr[i].split("=");
-      if(cookieName == cookiePair[0].trim()) {
-          return decodeURIComponent(cookiePair[1]);
-      }
+ 
+ function CheckDynamic(){
+    if(sessionStorage.getItem('payDynamically') == 'True'){
+      alert("This user can buy up to 120eu worth of petrol");
   }
-  return null;
-}
- function checkCardCookie() {
-   var bool = getCookie("payByCard");
-     if (bool == "True") {
-       alert("cookie is set, this transaction must lead to card interface after amount is set");
-     }
-   }
-   function checkCardPumpCookie() {
-      var bool = getCookie("dynamicPayment");
-        if (bool == "True") {
-         alert("cookie is set, can pump up to 120eu");
-        }
+ }
 
-      }
+ function PayByCard(){
+     sessionStorage.setItem('payByCard', 'True');
+  }
+  
+ function CheckCard(){
+    if(sessionStorage.getItem('payByCard') == 'True'){
+      alert("This user will pay by card, this page must redirect to creditCard.html");
+    }
+    }
  
