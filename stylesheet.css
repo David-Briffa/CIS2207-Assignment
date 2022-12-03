@@ -2,12 +2,12 @@
 /* background */
   html, body {
     height: 100%;
-    background: #d4d0d0;
+    background: silver;
     z-index: 10;
   }
 
   #information{
-    font-size: 40px;
+    font-size: 5rem;
     height:50%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
@@ -18,7 +18,7 @@
   }
   /*page information text */
   .information{
-    font-size: 40px;
+    font-size: 5rem;
     height: 50%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
@@ -28,7 +28,7 @@
     text-align: center;
   }
   .mainmenu-information{
-    font-size: 40px;
+    font-size: 5rem;
     height: 61%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
