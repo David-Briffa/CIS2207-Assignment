@@ -261,5 +261,13 @@
   justify-content: center;
   text-align: center;
 }
-
+.transactions-table{
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left:auto; 
+  margin-right:auto;
+  margin-top: 80px;
+}
   

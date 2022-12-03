@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Transaction Log</title>
+      <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <div> 
+    <a href="homeScreen.html">
+      <button class="back-btn"></button>
+    </a>
+    <a href="index.html" class="cancel-btn" href="#" >
+      <span class="circle"></span>
+      <span class="title">Go to Main Menu</span>
+      <span class="title title-hover">Main Menu</span>
+    </a> 
+   </div>
 <body class = "disable-select">
     <header>
-        <div class = "back">
-            <form action = "homeScreen.html"><button id = "Back" type = "submit">Back</button></form>
-        </div>
-        <table id = "transactionsMadeTable">
-            <caption> Transactions Made </caption>
+        <table id = "transactionsMadeTable" class="transactions-table" >
+            <div text class="information">
+                Transactions Made 
+            </div>
+
             <tr>
                 <th id = "column1">Transaction Number</th>
                 <th id = "column2">Date</th>
