@@ -7,7 +7,7 @@
   }
 
   #information{
-    font-size: 5rem;
+    font-size: 4vw;
     height:50%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
@@ -18,7 +18,7 @@
   }
   /*page information text */
   .information{
-    font-size: 5rem;
+    font-size: 4vw;
     height: 50%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
@@ -28,7 +28,7 @@
     text-align: center;
   }
   .mainmenu-information{
-    font-size: 5rem;
+    font-size: 4vw;
     height: 61%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
@@ -121,39 +121,39 @@
   }
   .five-btn{
     background-image: url("images/5.jpg");
-    height:10em;
-    width:20em;
+    height:10vw;
+    width:18vw;
     padding:1em;
     margin:0.5em;
     background-size: cover;
     border-radius: 5%;
    }
  .ten-btn{
-  background-image: url("images/10.jpg");
-  height:10em;
-  width:20em;
-  padding:1em;
-  margin:0.5em;
-  background-size: cover;
-  border-radius: 5%;
+   background-image: url("images/10.jpg");
+   height:10vw;
+   width:18vw;
+   padding:1em;
+   margin:0.5em;
+   background-size: cover;
+   border-radius: 5%;
  }
  .twenty-btn{
-  background-image: url("images/20.jpg");
-  height:10em;
-  width:20em;
-  padding:1em;
-  margin:0.5em;
-  background-size: cover;
-  border-radius: 5%;
+   background-image: url("images/20.jpg");
+   height:10vw;
+   width:18vw;
+   padding:1em;
+   margin:0.5em;
+   background-size: cover;
+   border-radius: 5%;
  } 
  .fifty-btn{
-  background-image: url("images/50.jpg");
-  height:10em;
-  width:20em;
-  padding:1em;
-  margin:0.5em;
-  background-size: cover;
-  border-radius: 5%;
+   background-image: url("images/50.jpg");
+   height:10vw;
+   width:18vw;
+   padding:1em;
+   margin:0.5em;
+   background-size: cover;
+   border-radius: 5%;
  }
 .swipe{
     position: relative;
@@ -164,8 +164,8 @@
   background-image: url('images/card.jpeg');
   background-size:cover;
   border-radius: 25px;  
-  width:40em;
-  height:24.1em;
+  width:27vw;
+  height:17vw;
   border: 3px solid #131313;
 
 }
@@ -173,8 +173,8 @@
   background-image:url('images/money.jpg');
   background-size:cover;
   border-radius: 25px;  
-  width:40em;
-  height:24.1em;
+  width:27vw;
+  height:17vw;
   border: 3px solid #131313;
 
 }
