@@ -7,3 +7,7 @@ function cashUndo(){
     sessionStorage.removeItem('payByCard');
     window.location.replace("paymentInterface.html");
 }
+function dynamicUndo(){
+    sessionStorage.removeItem('payDynamically');
+    window.location.replace("fixedDynamicPayment.html");
+}
