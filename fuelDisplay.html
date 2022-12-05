@@ -31,12 +31,13 @@
     <div class="wrap">
         <button id="pump" class="main-btn" onmousedown="start()" onmouseup="stop()">Pump fuel</button>
         <button id="complete" onclick="location.href='transaction.html'">Go to transaction</button>
-        <button id="back" class="back-btn" onclick="history.back()"></button>  
+        <button id="back" class="back-btn" onclick=dynamicUndo()></button>  
     </div>
-    <button type="button" value="test" id="test" onclick="checkCardPumpCookie()">check for cookie</button>
+    <button type="button" value="test" id="test" onclick="CheckDynamic()">check for cookie</button>
 
 </body>
 
 <script src="jsFiles\fuelFunction.js"></script>
 <script src="jsFiles\creditCardSwiped.js"></script>
+<script src="jsFiles\undoAndCancel.js"></script>
 </html>
