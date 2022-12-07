@@ -333,10 +333,11 @@ if (document.getElementById("a-changePrice")) {
                 }, 3000);
             } else {
                 localStorage.setItem("priceToEdit", parseFloat(result).toFixed(2));
-                localStorage.setItem("d-perL", parseFloat(result).toFixed(2));
+                setFuelPrice();
                 window.location.href = "successChangedFuelPrice.html";
             }
         });
+
     }
     
     //Storing the new Regular Petrol fuel price in local
@@ -370,10 +371,11 @@ if (document.getElementById("a-changePrice")) {
                 }, 3000);
             } else {
                 localStorage.setItem("priceToEdit", parseFloat(result).toFixed(2));
-                localStorage.setItem("r-perL", parseFloat(result).toFixed(2));
+                setFuelPrice();
                 window.location.href = "successChangedFuelPrice.html";
             }
         });
+
     }
 
     //Storing the new Hi-Grade Petrol fuel price in local
@@ -407,10 +409,11 @@ if (document.getElementById("a-changePrice")) {
                 }, 3000);
             } else {
                 localStorage.setItem("priceToEdit", parseFloat(result).toFixed(2));
-                localStorage.setItem("h-perL", parseFloat(result).toFixed(2));
+                setFuelPrice();
                 window.location.href = "successChangedFuelPrice.html";
             }
         });
+        
     }
 };
 
@@ -569,4 +572,67 @@ function updateNumber2() {
         }
     }
     document.getElementById("inputBox").innerHTML = num.toString();
+}
+
+
+//sets new fuel pricing
+
+var price = [];
+//converts fuel price string into an array.
+function getFuelPrice(){
+
+    var arrPointer = 0;
+    var cookieString = localStorage.fuelPriceCookie;
+    var currentString = null;
+
+    for(var i =0;i<cookieString.length;i++){
+
+        if(cookieString.charAt(i)!=","){
+
+            if(currentString==null){
+                currentString = cookieString.charAt(i);
+            }
+            else{
+            currentString = currentString.concat(cookieString.charAt(i));
+            }
+        }
+        else{
+            price[arrPointer] = currentString;
+            currentString = null;
+            arrPointer++;
+        }
+
+        price[arrPointer] = currentString;
+
+    }
+
+}
+
+function setFuelPrice(){
+
+    getFuelPrice();
+
+    debugger;
+    if(localStorage.fuel == "Diesel"){
+        var fuelType = localStorage.fuel
+    }
+    else{
+        var fuelType = localStorage.fuel.concat(localStorage.type);
+    }
+
+    var newPrice = localStorage.priceToEdit;
+  
+    for(var i =0; i<price.length;i+=2){
+
+        if(price[i]==fuelType){
+            price[i+1]=newPrice;
+            i=price.length;
+        }
+
+    }
+
+    var priceString = price.toString();
+    localStorage.setItem("fuelPriceCookie",priceString);
+
+
 }
