@@ -1,41 +1,47 @@
 
-//sets cookie expiry date
-var date = new Date();
-date.setTime(date.getTime()+(10*365*24*60*60*1000));
-expires = " expires="+date.toUTCString();
+//checks if the fuel prices are set on system startup. if the values are not set default fuel prices are set.
+function priceIntializeSetter(){
+
+    //checks if this is the first startup of the system
+    if(localStorage.priceSetCheck=="1"){
+        localStorage.setItem("priceSetCheck","1");
+    }
+    if(localStorage.getItem("priceSetCheck")===null){
+        localStorage.setItem("priceSetCheck","0");
+    }
+
+    //if it is the first start up then set the fuelPriceCookie
+    if(localStorage.priceSetCheck!="1"){
+
+        localStorage.setItem("fuelPriceCookie","diesel,1.21,petHi,1.50,petLo,1.30;");
+
+    }
+
+    //sets the priceSetCheck to 1 to show that the program has been started before
+    localStorage.setItem("priceSetCheck","1");
+
+}
 
 //sets fuel type
 function fuelType(type){
-    document.cookie = "fuelType="+type+";"+expires+";";
+    sessionStorage.setItem("fuelType",type);
+
+    priceIntializeSetter();
+
 }
 
 //sets grade type
 function fuelGrade(grade){
-    document.cookie = "fuelGrade="+grade+";"+expires+";";
+    sessionStorage.setItem("fuelGrade",grade);
 }
 
-//used to read the string in a cookie
-function getCookie(cookieName) {
-    var cookieArr = document.cookie.split(";");
-    for(var i = 0; i < cookieArr.length; i++) {
-        var cookiePair = cookieArr[i].split("=");
-        if(cookieName == cookiePair[0].trim()) {
-            return decodeURIComponent(cookiePair[1]);
-        }
-    }
-    return null;
-}
-
-
+var price = [];
 //converts fuel price string into an array.
 function getFuelPrice(){
 
-    var price = [];
     var arrPointer = 0;
-    var cookieString = getCookie("fuelPriceCookie");
+    var cookieString = localStorage.fuelPriceCookie;
     var currentString = null;
-
-    debugger;
 
     for(var i =0;i<cookieString.length;i++){
 
@@ -57,6 +63,26 @@ function getFuelPrice(){
         price[arrPointer] = currentString;
 
     }
+
+}
+
+function setFuelPrice(fuelType,newPrice){
+
+    getFuelPrice();
+
+    debugger;
+    for(var i =0; i<price.length;i+=2){
+
+        if(price[i]==fuelType){
+            price[i+1]=newPrice;
+            i=price.length;
+        }
+
+    }
+
+    var priceString = price.toString();
+    localStorage.setItem("fuelPriceCookie",priceString);
+
 
 }
 
