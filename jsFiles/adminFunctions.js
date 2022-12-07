@@ -1,3 +1,26 @@
+
+function priceIntializeSetter(){
+
+    //checks if this is the first startup of the system
+    if(localStorage.priceSetCheck=="1"){
+        localStorage.setItem("priceSetCheck","1");
+    }
+    if(localStorage.getItem("priceSetCheck")===null){
+        localStorage.setItem("priceSetCheck","0");
+    }
+
+    //if it is the first start up then set the fuelPriceCookie
+    if(localStorage.priceSetCheck!="1"){
+
+        localStorage.setItem("fuelPriceCookie","Diesel,1.21,PetrolRegular,1.50,PetrolHi-grade,1.30;");
+
+    }
+
+    //sets the priceSetCheck to 1 to show that the program has been started before
+    localStorage.setItem("priceSetCheck","1");
+
+}
+
 // Fuel Information
 
 if (document.getElementById("petrol")) {
@@ -8,28 +31,16 @@ if (document.getElementById("petrol")) {
     document.getElementById("diesel").addEventListener("click", function() {
         localStorage.setItem("fuel", "Diesel");
         localStorage.setItem("type", "");
-        if (localStorage.getItem("d-perL") == null) {
-            localStorage.setItem("d-perL", "1.25");
-        }
-        localStorage.setItem("perL", localStorage.getItem("d-perL"));
     });
 }
 
 if (document.getElementById("reg")) {
     document.getElementById("reg").addEventListener("click", function() {
         localStorage.setItem("type", "Regular");
-        if (localStorage.getItem("r-perL") == null) {
-            localStorage.setItem("r-perL", "1.40");
-        }
-        localStorage.setItem("perL", localStorage.getItem("r-perL"));
     });
 
     document.getElementById("high-grade").addEventListener("click", function() {
         localStorage.setItem("type", "Hi-grade");
-        if (localStorage.getItem("h-perL") == null) {
-            localStorage.setItem("h-perL", "1.45");
-        }
-        localStorage.setItem("perL", localStorage.getItem("h-perL"));
     });
 }
 

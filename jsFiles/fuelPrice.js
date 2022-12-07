@@ -13,7 +13,8 @@ function priceIntializeSetter(){
     //if it is the first start up then set the fuelPriceCookie
     if(localStorage.priceSetCheck!="1"){
 
-        localStorage.setItem("fuelPriceCookie","diesel,1.21,petHi,1.50,petLo,1.30;");
+        localStorage.setItem("fuelPriceCookie","Diesel,1.21,PetrolRegular,1.50,PetrolHi-grade,1.30;");
+
 
     }
 
