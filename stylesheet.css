@@ -262,11 +262,23 @@
 }
 .transactions-table{
   display:grid;
+  border: 1px solid ;
+  border-width: 0.4rem;
+  border-spacing: 2rem;
+  font-size:1.5rem;
+  width:70rem;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-left:auto; 
   margin-right:auto;
   margin-top: 80px;
-}
   
+}
+.transaction-headers {
+  font-size: 2rem;
+  padding:3rem;
+}
+.first-transaction{
+  border: 1px solid;
+}
