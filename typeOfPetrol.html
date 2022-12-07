@@ -1,23 +1,28 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Fuel prices</title>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<a href="fuelType.html">
-    <button class = back-btn></button>
-</a>
-<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set Fuel prices</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <a href="fuelType.html">
+        <button class = back-btn></button>
+    </a>
+    <body>
+       
+<body class = "disable-select">
     <div class="information">Choose the type of Petrol:</div>
-        <div class = "wrap">
+    <div class = "wrap">
             <form action = "changeFuelPrice.html">
-                <button id = "Regular" class="main-btn">Regular</button>
-                <button id = "Hi-grade" class="main-btn">Hi-Grade</button>
+                <button id = "reg" class = "main-btn">Regular</button>
+                <button id = "high-grade" class="main-btn">Hi-Grade</button>
             </form>
-        </div> 
+        </div>
     </div>
+    <h3 id = "loggedManager" class = "def-text">Manager Logged in: Manager1</h3>
+    <script src="./jsFiles/adminFunctions.js"></script>
 </body>
-<h3 id = "loggedManager" class = "def-text">Manager Logged in: Manager1</h3>
+
 </html>
