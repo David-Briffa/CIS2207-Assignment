@@ -1,3 +1,5 @@
+//used throughout the program
+var price = [];
 
 function priceIntializeSetter(){
 
@@ -304,7 +306,19 @@ if (document.getElementById("a-changePrice")) {
 
     // Storing the new Diesel fuel price in local
     if ((localStorage.getItem("fuel") == "Diesel")) {
-        document.getElementById("h-priceToEdit-price").innerHTML = "€ " + localStorage.getItem("d-perL");
+
+        var tempFuelPrice;
+
+        getFuelPrice();
+        for(i=0;i<price.length;i+=2){
+
+            if(price[i]=="Diesel"){
+                tempFuelPrice = price[i+1];
+            }
+
+        }
+
+        document.getElementById("h-priceToEdit-price").innerHTML = "€ " + tempFuelPrice;
         aEnterBtn.addEventListener("click", function() {
             var num = " ";
             var decimal = "";
@@ -342,7 +356,19 @@ if (document.getElementById("a-changePrice")) {
     
     //Storing the new Regular Petrol fuel price in local
     if ((localStorage.getItem("type") == "Regular") && (localStorage.getItem("fuel") == "Petrol")) {
-        document.getElementById("h-priceToEdit-price").innerHTML = "€ " + localStorage.getItem("r-perL");
+
+        var tempFuelPrice;
+
+        getFuelPrice();
+        for(i=0;i<price.length;i+=2){
+
+            if(price[i]=="PetrolRegular"){
+                tempFuelPrice = price[i+1];
+            }
+
+        }
+
+        document.getElementById("h-priceToEdit-price").innerHTML = "€ " + tempFuelPrice;
         aEnterBtn.addEventListener("click", function() {
             var num = " ";
             var decimal = "";
@@ -380,7 +406,19 @@ if (document.getElementById("a-changePrice")) {
 
     //Storing the new Hi-Grade Petrol fuel price in local
     if ((localStorage.getItem("type") == "Hi-grade") && (localStorage.getItem("fuel") == "Petrol")) {
-        document.getElementById("h-priceToEdit-price").innerHTML = "€ " + localStorage.getItem("h-perL");
+
+        var tempFuelPrice;
+
+        getFuelPrice();
+        for(i=0;i<price.length;i+=2){
+
+            if(price[i]=="PetrolHi-grade"){
+                tempFuelPrice = price[i+1];
+            }
+
+        }
+
+        document.getElementById("h-priceToEdit-price").innerHTML = "€ " + tempFuelPrice;
         aEnterBtn.addEventListener("click", function() {
             var num = " ";
             var decimal = "";
@@ -577,7 +615,6 @@ function updateNumber2() {
 
 //sets new fuel pricing
 
-var price = [];
 //converts fuel price string into an array.
 function getFuelPrice(){
 
