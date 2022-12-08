@@ -649,7 +649,6 @@ function setFuelPrice(){
 
     getFuelPrice();
 
-    debugger;
     if(localStorage.fuel == "Diesel"){
         var fuelType = localStorage.fuel
     }
