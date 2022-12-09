@@ -5,7 +5,11 @@
     background: silver;
     z-index: 10;
     user-select: none;
-  }
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;  }
 
   #information{
     font-size: 4vw;
@@ -30,6 +34,16 @@
   }
   .mainmenu-information{
     font-size: 4vw;
+    height: 61%;
+    text-transform: uppercase;
+    font-family: 'Verdana', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .price-information{
+    font-size: 1.5vw;
     height: 61%;
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
@@ -213,7 +227,8 @@
 .cancel-btn:active { 
   box-shadow: 0 8px 16px -8px rgba(248, 0, 0, 0.7);
   -webkit-transform: scale(0.98);
-  transform: scale(0.96); }
+  transform: scale(0.96);
+ }
   
 .cancel-btn:hover { 
   background: linear-gradient(-135deg, #FF0000 0%,#ff5e00 100%); }
@@ -225,8 +240,7 @@
   background-color: #fff;
   position: absolute;
   margin: 2px;
-  height: 2.5vw; 
-  width: 2.5vw;
+ 
   top: 0; left: 0;
   border-radius: 50%;
   transition: all 1.5s ease;
@@ -241,7 +255,8 @@
 .cancel-btn span.title { 
   position: absolute;
   left: 85px;
-  font-size: 17px;
+  text-align: center;
+  font-size: 1vw;
   font-weight: bold;
   color: #fff;
   transition: all 1.5s linear; 
