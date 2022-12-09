@@ -282,3 +282,64 @@
 .first-transaction{
   border: 1px solid;
 }
+
+/* fuel display page */
+.informationFuel {
+    font-size: 4vw;
+    height: 22%;
+    text-transform: uppercase;
+    font-family: 'Verdana', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.wrapFuelButton {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.fuelButtons {
+  display:flex;
+  width:728px;
+}
+
+.displayBorder {
+  width: 45%;
+  border: 5px solid black;
+  justify-content: center;
+  
+}
+.invisibleBorder {
+  display:flex;
+  justify-content: center;
+}
+.displayBox {
+  height:95%;
+  width:99%;
+}
+.progressbar-out {
+  background-color:#d3d3d3;
+  justify-content: center;
+  border: 1.4px solid black;
+}
+.blank1 {
+  height: 12px;
+}
+
+.descText {
+  font-size:170%;
+}
+
+.valueText {    
+  @import url('https://fonts.cdnfonts.com/css/seven-segment');
+  font-family: 'Seven Segment', sans-serif;
+  text-align: center;
+  width:80px;
+  font-size:230%;
+}
+#progressbar-in {
+  height: 17px;
+  background-color: blue;
+}
+
