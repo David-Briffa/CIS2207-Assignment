@@ -6,32 +6,52 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Fueling</title>
       <link rel="stylesheet" href="stylesheet.css">
+      <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
   </head>
 
 <body>
-    <div class="information">
+    <div class="informationFuel">
         Fuel display<br>
-        Total sale (€)
-    </div>
-    <div>
-        <p id="totalsale">placeholder number</p>
-    </div>
-        <h3>This sale (€)</h3>
-    <div>
-        <p id="sale">placeholder number</p>
-    </div>
-        <h3>Litres</h3>
-    <div>
-        <p id="litres">placeholder number</p>
-    </div>
-        <h3>Cents per litre</h3>
-    <div>
-        <p id="cost">placeholder number</p>
+        
     </div>
     <div class="wrap">
-        <button id="pump" class="main-btn" onmousedown="start()" onmouseup="stop()">Pump fuel</button>
-        <button id="complete" onclick="location.href='transaction.html'">Go to transaction</button>
-        <button id="back" class="back-btn" onclick=dynamicUndo()></button>  
+        <div class="displayBorder">
+            <div class="invisibleBorder">
+                <div class="displayBox">
+                    <div>
+                        <h3 class="descText">Total sale (€)</h3>
+                        <p class="valueText" id="totalsale">placeholder number</p>
+                        <div class="blank1"></div>
+                    </div>
+                    <div>
+                        <h3 class="descText">This sale (€)</h3>
+                        <p class="valueText" id="sale">placeholder number</p>
+                        <div class="blank1"></div>
+                    </div>
+                    <div>
+                        <h3 class="descText">Litres</h3>
+                        <p class="valueText" id="litres">placeholder number</p>
+                        <div class="progressbar-out">
+                            <div id="progressbar-in"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="descText">Cents per litre</h3>
+                        <p class="valueText" id="cost">placeholder number</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="wrapFuelButton">
+        <div class="fuelButtons">
+            <button id="pump" class="main-btn" onmousedown="start()" onmouseup="stop()">Pump fuel</button>
+            <button id="complete" class="main-btn" onclick="location.href='transaction.html'">Go to transaction</button>
+            <button id="back" class="back-btn" onclick=dynamicUndo()></button>  
+        </div>
     </div>
     <button type="button" value="test" id="test" onclick="CheckDynamic()">check for cookie</button>
 
@@ -40,4 +60,5 @@
 <script src="jsFiles\fuelFunction.js"></script>
 <script src="jsFiles\creditCardSwiped.js"></script>
 <script src="jsFiles\undoAndCancel.js"></script>
+<script src="jsFiles\cashFunction.js"></script>
 </html>
