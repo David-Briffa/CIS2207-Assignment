@@ -34,8 +34,13 @@ function Swipe() {
   }
   
  function CheckCard(){
-    if(sessionStorage.getItem('payByCard') == 'True'){
-      alert("This user will pay by card, this page must redirect to creditCard.html");
+    if(sessionStorage.getItem('payByCard') == 'True')
+    {
+      return true;
+    }
+    else
+    {
+      return false;
     }
     }
  
