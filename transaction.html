@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<body>
-    <div text class="information">
-        Card has been charged successfully.
+<body onload="transactionComplete()">
+    <div id='information' text class="information">
     </div>
     
     <div class="wrap">
-        <button class="main-btn" onclick="location.href='index.html'">Main Menu</button>
+        <button class="main-btn" onclick=cancelTransaction()>Main Menu</button>
     </div>
 </body>
 <script src="jsFiles\creditCardSwiped.js"></script>
