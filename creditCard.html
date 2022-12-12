@@ -22,11 +22,18 @@
       <p id="information">Please Swipe your card</p>
    </div>
    <div class="wrap">
-      <button type="button" value="card" class="swipe" onclick="Swipe()">Swipe Card</button>
-   </div>
-   <div class="wrap">
       <button type="button" value="Accepted" id="accepted_button" class="main-btn" onclick="Accepted()">Accepted</button>
       <button type="button" value="Denied" id="denied_button" class="main-btn" onclick="Denied()">Denied</button>
+   </div>
+
+      <div id="animation" class="swipeCard">
+         <div class="creditCard"></div>
+         <div class="machineTop"></div>
+         <div class="machineBottom"></div>
+      </div>
+
+   <div class="wrap">
+      <button type="button" value="card" class="swipe" onclick="Swipe()">Swipe Card</button>
    </div>
 </body>
 <script src="jsFiles\creditCardSwiped.js"></script>

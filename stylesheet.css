@@ -1,64 +1,68 @@
-* {box-sizing:border-box;}
+* {
+  box-sizing: border-box;
+}
 /* background */
-  html, body {
-    height: 70%;
-    background: silver;
-    z-index: 10;
-    user-select: none;
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;  }
+html,
+body {
+  height: 70%;
+  background: silver;
+  z-index: 10;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-  #information{
-    font-size: 4vw;
-    height:50%;
-    text-transform: uppercase;
-    font-family: 'Verdana', sans-serif;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  /*page information text */
-  .information{
-    font-size: 4vw;
-    height: 50%;
-    text-transform: uppercase;
-    font-family: 'Verdana', sans-serif;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .mainmenu-information{
-    font-size: 4vw;
-    height: 61%;
-    text-transform: uppercase;
-    font-family: 'Verdana', sans-serif;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .price-information{
-    font-size: 1.5vw;
-    height: 61%;
-    text-transform: uppercase;
-    font-family: 'Verdana', sans-serif;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  /* Main buttons */
-  .wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+#information {
+  font-size: 4vw;
+  height: 50%;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*page information text */
+.information {
+  font-size: 4vw;
+  height: 40%;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.mainmenu-information {
+  font-size: 4vw;
+  height: 70%;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.price-information {
+  font-size: 1.5vw;
+  height: 61%;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Main buttons */
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
   .main-btn {
     min-width: 330px;
@@ -171,7 +175,13 @@
    border-radius: 5%;
  }
 
- .total{
+ .total-wrap{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total{
   font-size: 2rem;
   display: flex;
     align-items: center;
@@ -308,14 +318,14 @@
 
 /* fuel display page */
 .informationFuel {
-    font-size: 4vw;
-    height: 22%;
-    text-transform: uppercase;
-    font-family: 'Verdana', sans-serif;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  font-size: 4vw;
+  height: 40%;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .wrapFuelButton {
   display:flex;
