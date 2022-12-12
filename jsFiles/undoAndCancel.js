@@ -11,3 +11,9 @@ function dynamicUndo(){
     sessionStorage.removeItem('payDynamically');
     window.location.replace("fixedDynamicPayment.html");
 }
+function undoCard(){
+    sessionStorage.removeItem('payDynamically');
+    sessionStorage.removeItem('payByCard');
+    window.location.replace("fixedDynamicPayment.html");
+
+}
