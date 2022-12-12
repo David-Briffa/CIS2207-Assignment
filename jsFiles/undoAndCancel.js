@@ -15,3 +15,4 @@ function clearPaymentTypes(){
     sessionStorage.removeItem('payDynamically');
     sessionStorage.removeItem('payByCard');
 }
+
