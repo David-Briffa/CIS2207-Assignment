@@ -178,6 +178,7 @@ body {
 }
 .total-wrap{
   font-size: 2rem;
+  font-family: sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -415,6 +416,9 @@ body {
   z-index: 3;
   width: 420px;
   left: calc(50% - 210px);
+}
+.disable-select{
+  font-family: sans-serif;
 }
 
 @keyframes swipeCard {
