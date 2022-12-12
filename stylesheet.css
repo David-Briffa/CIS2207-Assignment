@@ -396,7 +396,7 @@ body {
 .machineBottom {
   border-radius: 8px 8px 0 0;
   position: absolute;
-  background: black;
+  background: #434343;
 }
 .machineTop {
   height: 20px;
@@ -416,15 +416,17 @@ body {
 @keyframes swipeCard {
   0% {
     margin-left: -90px;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     opacity: 1;
   }
-  50% {
+  25%{
     transform: rotate(0deg);
+  }
+  50% {
     opacity: 0.95;
   }
   75% {
-    opacity: 0.85;
+    opacity: 0.9;
   }
   100% {
     margin-left: 500px;
