@@ -17,23 +17,20 @@ function Swipe() {
   denied.style.display = "block";
   accepted.style.display = "block";
 
-  localStorage.setItem("swiped", "True");
   information.textContent = "Card Has Been Swiped";
   information.body.appendChild(information);
 }
 function Accepted() {
-  if (localStorage.getItem("swiped") == "True") {
-    localStorage.removeItem("swiped");
+   localStorage.removeItem("swiped");
     document.cookie = "cardAccepted=True";
     window.location.replace("fuelDisplay.html");
   }
-}
 function Denied() {
   swipe.style.display = "block";
   animation.style.display = "none";
   denied.style.display = "none";
   accepted.style.display = "none";
-  
+
   information.textContent = "Card has been denied, please swipe again";
   information.body.appendChild(information);
 }
