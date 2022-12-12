@@ -56,3 +56,13 @@ function CheckCard() {
     return false;
   }
 }
+function farewellMessage() {
+  if (sessionStorage.getItem("payByCard") == "True" || sessionStorage.getItem("payDynamically") == "True") {
+    information.textContent = "Card has been charged";
+    information.body.appendChild(information);
+
+  } else {
+    information.textContent = "Thank you for using our station!";
+    information.body.appendChild(information);
+  }
+}
