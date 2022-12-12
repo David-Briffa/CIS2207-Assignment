@@ -36,6 +36,7 @@ function fuelGrade(grade){
     sessionStorage.setItem("fuelGrade",grade);
 }
 
+
 var price = [];
 //converts fuel price string into an array.
 function getFuelPrice(){
