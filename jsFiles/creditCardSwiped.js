@@ -1,51 +1,58 @@
-var information = document.getElementById("information");  
+var information = document.getElementById("information");
 var payByCard = document.cookie;
 var text = document.getElementById("text");
 
-function Swipe() {
-    localStorage.setItem('swiped', 'True');
-    information.textContent = "Card Has Been Swiped";       
-    information.body.appendChild(information);   
- }
- function Accepted() {
-    if(localStorage.getItem('swiped') == 'True'){
-        localStorage.removeItem('swiped');
-        document.cookie = 'cardAccepted=True';
-        window.location.replace("fuelDisplay.html");
-    }
- }
- function Denied() {
-        information.textContent = "Card has been denied, please swipe again";       
-        information.body.appendChild(information);    
-       }
- 
- function PayByCard(){
-  document.cookie = 'payByCard=True';
- }
- function PayDynamically(){
-  document.cookie = 'dynamicPayment=True';
-}
- function getCookie(cookieName) {
-  var cookieArr = document.cookie.split(";");
-  for(var i = 0; i < cookieArr.length; i++) {
-      var cookiePair = cookieArr[i].split("=");
-      if(cookieName == cookiePair[0].trim()) {
-          return decodeURIComponent(cookiePair[1]);
-      }
-  }
-  return null;
-}
- function checkCardCookie() {
-   var bool = getCookie("payByCard");
-     if (bool == "True") {
-       alert("cookie is set, this transaction must lead to card interface after amount is set");
-     }
-   }
-   function checkCardPumpCookie() {
-      var bool = getCookie("dynamicPayment");
-        if (bool == "True") {
-         alert("cookie is set, can pump up to 120eu");
-        }
+const swipe = document.getElementById("swipe");
+const animation = document.getElementById("animation");
+const accepted = document.getElementById("accepted_button");
+const denied = document.getElementById("denied_button");
 
-      }
- 
+animation.style.display = "none";
+denied.style.display = "none";
+accepted.style.display = "none";
+
+function Swipe() {
+  swipe.style.display = "none";
+  animation.style.display = "block";
+  denied.style.display = "block";
+  accepted.style.display = "block";
+
+  information.textContent = "Card Has Been Swiped";
+  information.body.appendChild(information);
+}
+function Accepted() {
+   localStorage.removeItem("swiped");
+    document.cookie = "cardAccepted=True";
+    window.location.replace("fuelDisplay.html");
+  }
+function Denied() {
+  swipe.style.display = "block";
+  animation.style.display = "none";
+  denied.style.display = "none";
+  accepted.style.display = "none";
+
+  information.textContent = "Card has been denied, please swipe again";
+  information.body.appendChild(information);
+}
+
+function PayDynamically() {
+  sessionStorage.setItem("payDynamically", "True");
+}
+
+function CheckDynamic() {
+  if (sessionStorage.getItem("payDynamically") == "True") {
+    alert("This user can buy up to 120eu worth of petrol");
+  }
+}
+
+function PayByCard() {
+  sessionStorage.setItem("payByCard", "True");
+}
+
+function CheckCard() {
+  if (sessionStorage.getItem("payByCard") == "True") {
+    return true;
+  } else {
+    return false;
+  }
+}

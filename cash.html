@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <div> 
- <a href="fixedDynamicPayment.html">
-   <button class="back-btn"></button>
- </a>
- <a href="index.html" class="cancel-btn" href="#" >
+   <button class="back-btn" onclick="cashUndo()"></button>
+   <button onclick=cancelTransaction() class="cancel-btn" >
    <span class="circle"></span>
    <span class="title">Cancel Transaction</span>
    <span class="title title-hover">Main Menu</span>
@@ -21,29 +19,28 @@
  <div text class="information">
     <p id="information">Set Payment <br>Select the amount</p>
  </div>
-
+ <div class="total-wrap" id="result">
+    <h2>Total: <span id="totalsale">0</span></h2>
+ </div>
         <section id="cashCalc">
             <div id="amounts">
                 <div class="wrap">
-                    <button type="submit" value="5" class="five-btn" id="5euro_button" onclick="addFive()"></button>
-                    <button type="submit" value="10" class="ten-btn" id="10euro_button" onclick="addTen()"></button>
-                    <button type="submit" value="20" class="twenty-btn" id="20euro_button" onclick="addTwenty()"></button>
-                    <button type="submit" value="50" class="fifty-btn"id="50euro_button" onclick="addFifty()"></button>
+                    <button type="submit" class="five-btn" onclick="addToTotal(5)"></button>
+                    <button type="submit" class="ten-btn" onclick="addToTotal(10)"></button>
+                    <button type="submit" class="twenty-btn" onclick="addToTotal(20)"></button>
+                    <button type="submit" class="fifty-btn" onclick="addToTotal(50)"></button>
                 </div>
             </div>
 
-            <button type="button" value="test" id="test" onclick="checkCardCookie()">check for cookie</button>
-            <!--<button type="button" value="test" id="test" onclick="setLocal()">set value 1</button>-->
-
         </section>
-        <section id="result">
-            <h2>Total: <span id="totalsale">0</span></h2>
-            <div class="wrap">
-               <button type="button" class="main-btn" id="fuelPump" onclick="location='fuelDisplay.html'">Continue</button>
+        
+        <div class="wrap">
+            <button type="button" class="main-btn" id="fuelPump" onclick="location='fuelDisplay.html'">Continue</button>
+            <button type="button" class="main-btn" id="sendToCard" onclick="location='creditCard.html'">Payment</button>
 
-            </div>
-        </section>
+         </div>
         <script src="jsFiles\cashFunction.js"></script>
         <script src="jsFiles\creditCardSwiped.js"></script>
+        <script src="jsFiles\undoAndCancel.js"></script>
     </body>
 </html>
