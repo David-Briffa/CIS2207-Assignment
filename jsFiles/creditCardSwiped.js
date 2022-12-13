@@ -47,6 +47,7 @@ function CheckDynamic() {
 
 function PayByCard() {
   sessionStorage.setItem("payByCard", "True");
+  sessionStorage.setItem('Total','0');
 }
 
 function CheckCard() {
