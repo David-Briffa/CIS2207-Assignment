@@ -36,7 +36,7 @@ body {
 }
 .mainmenu-information {
   font-size: 4vw;
-  height: 70%;
+  height: 75%;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
   display: flex;
@@ -68,7 +68,7 @@ body {
   min-height: 80px;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
-  font-size: 25px;
+  font-size: 1.5rem;
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #313133;
@@ -343,6 +343,7 @@ body {
 
 .displayBorder {
   width: 45%;
+  font-size: 1vw;
   border: 5px solid black;
   justify-content: center;
 }
