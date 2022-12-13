@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Payment</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<div> 
+   <button class="back-btn" onclick="cashUndo()"></button>
+   <button onclick=cancelTransaction() class="cancel-btn" >
+   <span class="circle"></span>
+   <span class="title">Cancel Transaction</span>
+   <span class="title title-hover">Main Menu</span>
+ </a> 
+</div>
+<body>
+ <div text class="information">
+    <p id="information">Set Payment <br>Select the amount</p>
+ </div>
+ <div class="total-wrap" id="result">
+    <h2>Total: <span id="totalsale">0</span></h2>
+ </div>
+        <section id="cashCalc">
+            <div id="amounts">
+                <div class="wrap">
+                    <button type="submit" class="five-btn" onclick="addToTotal(5)"></button>
+                    <button type="submit" class="ten-btn" onclick="addToTotal(10)"></button>
+                    <button type="submit" class="twenty-btn" onclick="addToTotal(20)"></button>
+                    <button type="submit" class="fifty-btn" onclick="addToTotal(50)"></button>
+                    <button type="submit" class="backspace" onclick="removeValue()">Backspace</button>
+                </div>
+            </div>
+
+        </section>
+        
+        <div class="wrap">
+            <button type="button" class="main-btn" id="fuelPump" onclick="location='fuelDisplay.html'">Continue</button>
+            <button type="button" class="main-btn" id="sendToCard" onclick="location='creditCard.html'">Payment</button>
+
+         </div>
+        <script src="jsFiles\cashFunction.js"></script>
+        <script src="jsFiles\creditCardSwiped.js"></script>
+        <script src="jsFiles\undoAndCancel.js"></script>
+    </body>
+</html>
