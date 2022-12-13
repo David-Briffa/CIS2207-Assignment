@@ -203,6 +203,16 @@ body {
   height: 17vw;
   border: 3px solid #131313;
 }
+
+/* sets text properties of cash and card buttons */
+.card-btn, .cash-btn{
+
+  font-size: 5vw;
+  color: black;
+  text-shadow:2px 2px 0 white;
+
+}
+
 /* back button */
 .back-btn {
   background-image: url("https://cdn-icons-png.flaticon.com/512/60/60690.png");
