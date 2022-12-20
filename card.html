@@ -17,20 +17,20 @@
 </div>
 <body>
  <div text class="information">
-    <p id="information">Set Payment <br>Select the amount</p>
+    <p id="information">Select the amount<br>Clicking on a note adds to the total</p>
  </div>
  <div class="total-wrap" id="result">
     <h2>Total: <span id="totalsale">0</span></h2>
  </div>
         <section id="cashCalc">
-            <div id="amounts">
+            <div id="amounts" class="amounts">
                 <div class="wrap">
                     <button type="submit" class="five-btn" onclick="addToTotal(5)"></button>
                     <button type="submit" class="ten-btn" onclick="addToTotal(10)"></button>
                     <button type="submit" class="twenty-btn" onclick="addToTotal(20)"></button>
                     <button type="submit" class="fifty-btn" onclick="addToTotal(50)"></button>
-                    <button type="submit" class="backspace" onclick="removeValue()">Backspace</button>
                 </div>
+                <button type="submit" class="backspace" onclick="removeValue()">Backspace</button>
             </div>
 
         </section>
