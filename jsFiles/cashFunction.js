@@ -1,25 +1,32 @@
 var Total = document.getElementById('totalsale');
-
+var buttons = document.getElementById('amounts');
 var sendToCard = document.getElementById('sendToCard');
 var fuelPump = document.getElementById('fuelPump');
+
+//hide next page buttons
 sendToCard.style.display = "none";
 fuelPump.style.display = "none";
 
 var currentResult = 0;
-var payByCash = document.cookie;
 
-//set total amount
-function setTotal(total)
+//checks if paying by card
+function cardCheck()
 {
-    sessionStorage.setItem('Total', total);
     let checked = CheckCard();
-    if( checked == true)
+    if(checked == true)
     {
         sendToCard.style.display = "block";
     }else
     {
         fuelPump.style.display = "block";
     }
+}
+
+//set total amount
+function setTotal(total)
+{
+    sessionStorage.setItem('Total', total);
+    buttons.addEventListener("click", cardCheck, {once: true}); //on click invokes cardCheck function once.
 }
 
 
@@ -30,11 +37,13 @@ function outputTotal(total)
     setTotal(total);
 }
 
+//retrieves Total cookie for fuelpump
 function getTotal()
 {
     sessionStorage.getItem('Total');
 }
 
+//calculations
 function addToTotal(amount)
 {
     switch(amount)
@@ -66,21 +75,23 @@ function addToTotal(amount)
 
 var removeVal = [];
 
-function removeValue(){
-    
+//undo last addition
+function removeValue()
+{    
     getLastAdd();
 
-    if(sessionStorage.getItem('Total')<1){
+    if(sessionStorage.getItem('Total')<1)
+    {
         return;
     }
-    else{
+    else
+    {
         currentResult = parseInt(sessionStorage.getItem('Total')) - parseInt(removeVal[removeVal.length-1]);
         removeVal.pop();
         var addString = removeVal.toString();
         sessionStorage.setItem("lastAdd",addString);
 
     }
-
     outputTotal(currentResult);
 
 }
@@ -109,36 +120,33 @@ function getLastAdd(){
                 currentString = null;
                 arrPointer++;
             }
-
             removeVal[arrPointer] = currentString;
-
         }
     }
 
 }
 
-function addToLastAdd(added){
-
+function addToLastAdd(added)
+{
     getLastAdd();
 
-    if(sessionStorage.lastAdd==null){
-
+    if(sessionStorage.lastAdd==null)
+    {
         removeVal[0] = added;
 
     }
-    else{
-
-        for(var i=0;i<removeVal.length+1;i++){
-            
-            if(removeVal[i]==null){
+    else
+    {
+        for(var i=0;i<removeVal.length+1;i++)
+        {
+            if(removeVal[i]==null)
+            {
                 removeVal[i] = added;
                 i=removeVal.length+1;
             }
 
         }
     }
-
     var addString = removeVal.toString();
     sessionStorage.setItem("lastAdd",addString);
-
 }
