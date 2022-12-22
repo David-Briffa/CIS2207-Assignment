@@ -454,9 +454,9 @@ body {
 }
 
 .backspace{
-  min-width: 20vw;
+  min-width: 15vw;
   margin: 10px;
-  min-height: 80px;
+  min-height: 50px;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
   font-size: 2vw;
