@@ -1,4 +1,5 @@
 var information = document.getElementById("information");
+var amount = document.getElementById("amount");
 var payByCard = document.cookie;
 var text = document.getElementById("text");
 
@@ -59,11 +60,16 @@ function CheckCard() {
 }
 function farewellMessage() {
   if (sessionStorage.getItem("payByCard") == "True" || sessionStorage.getItem("payDynamically") == "True") {
-    information.textContent = "Card has been charged";
+    information.textContent = "Card has been charged.";
+    amount.textContent = "Charge: €" + sessionStorage.lastSale;
+    amount.body.appendChild(amount);
     information.body.appendChild(information);
-
+    
   } else {
     information.textContent = "Thank you for using our station!";
+    amount.textContent = "Charge: €" + sessionStorage.lastSale;
+    amount.body.appendChild(amount);
     information.body.appendChild(information);
   }
+
 }
