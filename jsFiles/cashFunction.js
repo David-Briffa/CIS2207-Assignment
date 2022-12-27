@@ -1,7 +1,6 @@
 var Total = document.getElementById('totalsale');
 var buttons = document.getElementById('amounts');
-var sendToCard = document.getElementById('sendToCard');
-var fuelPump = document.getElementById('fuelPump');
+var info = document.getElementById('information');
 
 //hide next page buttons
 sendToCard.style.display = "none";
@@ -10,7 +9,7 @@ fuelPump.style.display = "none";
 var currentResult = 0;
 
 //checks if paying by card
-function cardCheck()
+function nextButton()
 {
     let checked = CheckCard();
     if(checked == true)
@@ -26,7 +25,8 @@ function cardCheck()
 function setTotal(total)
 {
     sessionStorage.setItem('Total', total);
-    buttons.addEventListener("click", cardCheck, {once: true}); //on click invokes cardCheck function once.
+      //on click invokes nextButton function once.
+      buttons.addEventListener("click", nextButton, {once: true});
 }
 
 
@@ -46,6 +46,8 @@ function getTotal()
 //calculations
 function addToTotal(amount)
 {
+  
+
     switch(amount)
     {
         case 5: currentResult += amount;
@@ -103,9 +105,10 @@ function getLastAdd(){
     var cookieString = sessionStorage.lastAdd;
     var currentString = null;
 
-    if(sessionStorage.lastAdd!=null){
-        for(var i =0;i<cookieString.length;i++){
-
+    if(sessionStorage.lastAdd!=null)
+    {
+        for(var i =0;i<cookieString.length;i++)
+        {
             if(cookieString.charAt(i)!=","){
 
                 if(currentString==null){
@@ -123,7 +126,6 @@ function getLastAdd(){
             removeVal[arrPointer] = currentString;
         }
     }
-
 }
 
 function addToLastAdd(added)
@@ -133,7 +135,6 @@ function addToLastAdd(added)
     if(sessionStorage.lastAdd==null)
     {
         removeVal[0] = added;
-
     }
     else
     {
@@ -149,4 +150,18 @@ function addToLastAdd(added)
     }
     var addString = removeVal.toString();
     sessionStorage.setItem("lastAdd",addString);
+}
+
+//checks if there was a valid input before sending to swipe card page
+function sendToPage()
+{
+    if(currentResult > 0)
+    {
+       window.location.replace("creditCard.html");
+    }
+    else
+    {
+        info.textContent = "Please enter a valid amount and try again.";
+        info.body.appendChild(info);
+    }
 }
