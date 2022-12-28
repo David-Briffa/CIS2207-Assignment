@@ -3,7 +3,7 @@
 html,
 body {
   height: 70%;
-  background: silver;
+  background: #827da3;
   z-index: 10;
   user-select: none;
   position: fixed;
