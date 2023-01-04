@@ -26,6 +26,12 @@
         <button class="main-btn" onclick = "priceIntializeSetter()">Manager Console</button>
      </a>
     </div>
+
+    <script> 
+    if (sessionStorage.getItem('fuelType') === null) {
+        localStorage.removeItem('TransactionStorageCookie');
+    } 
+    </script>
 </body>
 </html>
 <script src="jsFiles\fuelPrice.js"></script>
