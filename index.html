@@ -6,7 +6,7 @@
     <title>Main Menu</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+<body onload="clearPaymentTypes()">
     <div text class="mainMenu-information">
         Main menu<br>
         Select fuel type
@@ -26,7 +26,14 @@
         <button class="main-btn" onclick = "priceIntializeSetter()">Manager Console</button>
      </a>
     </div>
+
+    <script> 
+    if (sessionStorage.getItem('fuelType') === null) {
+        localStorage.removeItem('TransactionStorageCookie');
+    } 
+    </script>
 </body>
 </html>
 <script src="jsFiles\fuelPrice.js"></script>
 <script src="jsFiles\adminFunctions.js"></script>
+<script src="jsFiles\undoAndCancel.js"></script>

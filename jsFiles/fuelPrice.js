@@ -26,14 +26,16 @@ function priceIntializeSetter(){
 //sets fuel type
 function fuelType(type){
     sessionStorage.setItem("fuelType",type);
-
     priceIntializeSetter();
-
+    if (sessionStorage.fuelType == 'Diesel') {
+        sessionStorage.setItem("fuelGrade","");
+    }
 }
 
 //sets grade type
 function fuelGrade(grade){
     sessionStorage.setItem("fuelGrade",grade);
+    
 }
 
 

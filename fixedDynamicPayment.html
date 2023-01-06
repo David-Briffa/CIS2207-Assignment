@@ -10,7 +10,7 @@
    <a href="index.html">
      <button class="back-btn"></button>
    </a>
-   <button onclick=cancelTransaction() class="cancel-btn" >
+   <button onclick="cancelTransaction()" class="cancel-btn" >
      <span class="circle"></span>
      <span class="title">Cancel Transaction</span>
      <span class="title title-hover">Main Menu</span>
@@ -18,14 +18,14 @@
 </div>
 <body>
     <div text class="information">
-     Select Fueling Type:
+     Select Payment Type:
     </div>
     <div class="wrap">
      <a href="paymentInterface.html">
-        <button class="main-btn">set payment</button>
+        <button class="main-btn">Charge by Amount</button>
      </a>
      <a href="creditCard.html">
-        <button class="main-btn" onclick="PayDynamically()">dynamic payment</button>
+        <button class="main-btn" onclick="PayDynamically()">Charge by Litre</button>
      </a>
     </div>
 </body>

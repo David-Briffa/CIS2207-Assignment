@@ -3,7 +3,7 @@
 html,
 body {
   height: 70%;
-  background: silver;
+  background: #827da3;
   z-index: 10;
   user-select: none;
   position: fixed;
@@ -36,7 +36,7 @@ body {
 }
 .mainmenu-information {
   font-size: 4vw;
-  height: 70%;
+  height: 75%;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
   display: flex;
@@ -68,7 +68,7 @@ body {
   min-height: 80px;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
-  font-size: 25px;
+  font-size: 1.5rem;
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #313133;
@@ -203,6 +203,16 @@ body {
   height: 17vw;
   border: 3px solid #131313;
 }
+
+/* sets text properties of cash and card buttons */
+.card-btn, .cash-btn{
+
+  font-size: 5vw;
+  color: black;
+  text-shadow:2px 2px 0 white;
+
+}
+
 /* back button */
 .back-btn {
   background-image: url("https://cdn-icons-png.flaticon.com/512/60/60690.png");
@@ -343,6 +353,7 @@ body {
 
 .displayBorder {
   width: 45%;
+  font-size: 1vw;
   border: 5px solid black;
   justify-content: center;
 }
@@ -440,4 +451,30 @@ body {
     margin-left: 500px;
     opacity: 0;
   }
+}
+
+.backspace{
+  min-width: 15vw;
+  margin: 10px;
+  min-height: 50px;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  font-size: 2vw;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #3275bc;
+  background: linear-gradient(90deg, #7df9ff 0%, #22fdb4 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px #7a9fc7;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+.amounts{
+  text-align: center;
 }

@@ -16,9 +16,11 @@
  </a> 
 </div>
 <body>
+
  <div text class="information">
-    <p id="information">Set Payment <br>Select the amount</p>
+    <p id="information">Select the amount<br>Clicking on a note adds to the total</p>
  </div>
+
  <div class="total-wrap" id="result">
     <h2>Total: <span id="totalsale">0</span></h2>
  </div>
@@ -29,18 +31,16 @@
                     <button type="submit" class="ten-btn" onclick="addToTotal(10)"></button>
                     <button type="submit" class="twenty-btn" onclick="addToTotal(20)"></button>
                     <button type="submit" class="fifty-btn" onclick="addToTotal(50)"></button>
-                </div>
-            </div>
-
         </section>
         
         <div class="wrap">
-            <button type="button" class="main-btn" id="fuelPump" onclick="location='fuelDisplay.html'">Continue</button>
-            <button type="button" class="main-btn" id="sendToCard" onclick="location='creditCard.html'">Payment</button>
-
+            <button type="button" class="main-btn" id="fuelPump" onclick="location.href='fuelDisplay.html'"">Continue</button>
+            <button type="button" class="main-btn" id="sendToCard" onclick="sendToPage()">Payment</button>
          </div>
+
         <script src="jsFiles\cashFunction.js"></script>
         <script src="jsFiles\creditCardSwiped.js"></script>
         <script src="jsFiles\undoAndCancel.js"></script>
     </body>
 </html>
+
