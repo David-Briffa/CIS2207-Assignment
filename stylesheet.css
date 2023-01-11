@@ -129,7 +129,7 @@ body {
 }
 
 .keypad-btn{
-  min-width: 10vw;
+  min-width: 230px;
   margin: 10px;
   min-height: 3vw;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ body {
 .keypad-btn::before {
   content: "";
   border-radius: 1000px;
-  min-width: calc(9vw + 12px);
+  min-width: calc(210px + 12px);
   min-height: calc(2vw + 12px);
   border: 8px solid #60e698;
   box-shadow: 0 0 60px #93a8be;
