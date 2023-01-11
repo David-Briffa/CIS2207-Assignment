@@ -26,7 +26,7 @@ body {
 /*page information text */
 .information {
   font-size: 4vw;
-  height: 55%;
+  height: 35%;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
   display: flex;
@@ -63,9 +63,9 @@ body {
 }
 
 .main-btn {
-  min-width: 330px;
+  min-width: 22vw;
   margin: 10px;
-  min-height: 80px;
+  min-height: 6.5vw;
   text-transform: uppercase;
   font-family: "Verdana", sans-serif;
   font-size: 1.5rem;
@@ -87,8 +87,8 @@ body {
 .main-btn::before {
   content: "";
   border-radius: 1000px;
-  min-width: calc(300px + 12px);
-  min-height: calc(60px + 12px);
+  min-width: calc(21vw + 12px);
+  min-height: calc(5.5vw + 12px);
   border: 8px solid #60e698;
   box-shadow: 0 0 60px #93a8be;
   position: absolute;
